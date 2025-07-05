@@ -20,6 +20,63 @@
       font-size: 2.5em;
       margin-bottom: 10px;
     }
+    /* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 250px;
+  height: 100%;
+  background: rgba(0, 102, 204, 0.9);
+  color: #fff;
+  padding: 20px;
+  box-shadow: 3px 0 10px rgba(0,0,0,0.3);
+  transition: left 0.3s ease;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 10px;
+}
+
+.sidebar a {
+  display: block;
+  margin: 10px 0;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+.sidebar a:hover {
+  transform: translateX(5px);
+  color: #00e6e6;
+}
+
+/* Toggle Button */
+.sidebar-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: #00bfff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  border-radius: 5px;
+  z-index: 1001;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: background 0.3s;
+}
+
+.sidebar-toggle:hover {
+  background: #0099cc;
+}
     .categories {
       display: flex;
       flex-wrap: wrap;
@@ -132,16 +189,20 @@
     <h1>K Star Shop</h1>
     <p>Digital services by James Dev</p>
   </header>
-    <button id="toggleBtn">☰𝗠𝗘𝗡𝗨</button>
+  <!-- Sidebar Toggle Button -->
+<button class="sidebar-toggle" onclick="toggleSidebar()">☰ Menu</button>
 
-  <!-- Sidebar -->
-  <div id="sidebar">
-    <h2>k stars</h2>
-    <ul>
-      <li onclick="location.href='index2.html'">more information</li>
-    </ul>
-  </div>
-  
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+  <h2>K Star Shop</h2>
+  <a href="#wa-bots-deployment">WA Bots Deployment</a>
+  <a href="#wa-bots-creation">WA Bots Creation</a>
+  <a href="#web-dev">Website Development</a>
+  <a href="#ads-creation">Ads Creation</a>
+  <a href="#more-services">More Services</a>
+  <hr>
+  <a href="#info" class="info-btn">📘 More Information</a>
+</div>
   <div class="categories">
     <button onclick="document.getElementById('whatsapp').scrollIntoView()">WhatsApp Services</button>
     <button onclick="document.getElementById('websites').scrollIntoView()">Websites</button>
@@ -250,6 +311,11 @@
   </a>
 </div>
   </section>
-
+<script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.style.left = (sidebar.style.left === '0px') ? '-260px' : '0px';
+  }
+</script>
 </body>
 </html>
