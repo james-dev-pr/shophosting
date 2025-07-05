@@ -1,0 +1,198 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K Star Shop - By James Dev</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #b3e0ff, #e6f7ff);
+      overflow-x: hidden;
+    }
+    header {
+      padding: 30px 20px;
+      background: rgba(0, 123, 255, 0.2);
+      text-align: center;
+      color: #003366;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+    .categories button {
+      background: #0099cc;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .categories button:hover {
+      background: #0077aa;
+      transform: scale(1.05);
+    }
+    section {
+      padding: 40px 20px;
+    }
+    h2 {
+      text-align: center;
+      color: #004466;
+      margin-bottom: 20px;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .product {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      padding: 15px;
+      width: 260px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .product h3 {
+      color: #006699;
+      margin: 10px 0;
+    }
+    .product p {
+      font-size: 0.95em;
+      color: #444;
+    }
+    .product a {
+      display: inline-block;
+      margin-top: 10px;
+      background: #0077b3;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .product a:hover {
+      background: #005580;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>K Star Shop</h1>
+    <p>Digital services by James Dev</p>
+  </header>
+  <div class="categories">
+    <button onclick="document.getElementById('whatsapp').scrollIntoView()">WhatsApp Services</button>
+    <button onclick="document.getElementById('websites').scrollIntoView()">Websites</button>
+    <button onclick="document.getElementById('ads').scrollIntoView()">Ads & Media</button>
+    <button onclick="document.getElementById('ai').scrollIntoView()">AI Tools</button>
+    <button onclick="document.getElementById('scripts').scrollIntoView()">Custom Scripts</button>
+    <button onclick="document.getElementById('encryption').scrollIntoView()">Encryption</button>
+    <button onclick="document.getElementById('hosting').scrollIntoView()">Hosting</button>
+    <button onclick="document.getElementById('telegram').scrollIntoView()">Telegram Bots</button>
+  </div>  <section id="whatsapp">
+    <h2>WhatsApp Services</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://i.imgur.com/Z2MYNbj.png" alt="WA Deployment">
+        <h3>WA Bot Deployment</h3>
+        <p>Get your bot deployed on WhatsApp. Price: Ksh 100 - 300</p>
+        <a href="https://wa.me/254785016388?text=I'm%20interested%20in%20WA%20bot%20deployment">Order on WhatsApp</a>
+      </div>
+      <div class="product">
+        <img src="https://i.imgur.com/O0DCcQy.png" alt="bot development">
+        <h3>WA Bot Creation</h3>
+        <p>Full custom WhatsApp bot made. Price: Ksh 500 - 700</p>
+        <a href="https://wa.me/254785016388?text=I'm%20interested%20in%20WA%20bot%20creation">Order on WhatsApp</a>
+      </div>
+    </div>
+  </section>  <section id="websites">
+    <h2>Websites</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://i.imgur.com/8zD4kPz.jpg" alt="Website Development">
+        <h3>Website Development</h3>
+        <p>Professional websites for business or personal use. Price: Ksh 1,000 - 20,000</p>
+        <a href="https://wa.me/254785016388?text=I%20want%20a%20website%20developed">Order on WhatsApp</a>
+      </div>
+    </div>
+  </section>  <section id="ads">
+    <h2>Ads & Media</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://i.imgur.com/Ga5DdBy.jpg" alt="Ads Creation">
+        <h3>Ad Design & Modifying</h3>
+        <p>Catchy and high-converting ads created or improved. Price: Ksh 700</p>
+        <a href="https://wa.me/254785016388?text=I'm%20interested%20in%20ad%20design">Order on WhatsApp</a>
+      </div>
+    </div>
+  </section>  <section id="ai">
+    <h2>AI Tools</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://i.imgur.com/S6o5WLF.png" alt="AI Tools">
+        <h3>online billing</h3>
+        <p>billing solutions and integrations for business services. Price: Custom</p>
+        <a href="https://wa.me/254704955033?text=Tell%20me%20more%20about%20billing%20tools">Order on WhatsApp</a>
+      </div>
+    </div>
+  </section>  <section id="scripts">
+    <h2>HACKING & MINECRAFT SC</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://i.imgur.com/LEfvW5C.jpg" alt="Custom Scripts">
+        <h3>Code & Scripts</h3>
+        <p>Custom JavaScript, Minecraft, automation scripts and more. Price: Custom</p>
+        <a href="https://wa.me/254785016388?text=Need%20custom%20code%20or%20scripts">Order on WhatsApp</a>
+      </div>
+    </div>
+  </section>  <section id="encryption">
+    <h2>Encryption</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://i.imgur.com/HsmzT7r.jpg" alt="Encryption Services">
+        <h3>Encryption Tools</h3>
+        <p>Obfuscation, encryption, and code protection tools. Price: 200</p>
+        <a href="https://wa.me/254785016388?text=I'm%20interested%20in%20encryption">Order on WhatsApp</a>
+      </div>
+    </div>
+  </section>  <section id="hosting">
+    <h2>Hosting</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://i.imgur.com/o9uRzle.jpg" alt="Hosting">
+        <h3>Panel & Bot Hosting</h3>
+        <p>Affordable hosting for your bot or site. Price: 100 unli</p>
+        <a href="https://wa.me/25485016388?text=I%20want%20to%20host%20a%20project">Order on WhatsApp</a>
+      </div>
+    </div>
+  </section>  <section id="telegram">
+    <h2>Telegram Bots creation</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://i.imgur.com/tvMGq7r.png" alt="Telegram Bot">
+        <h3>Telegram Bot Creation</h3>
+        <p>Fast and modern Telegram bot builds. Price: 400</p>
+        <a href="https://wa.me/254785016388?text=Build%20me%20a%20Telegram%20bot">Order on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
