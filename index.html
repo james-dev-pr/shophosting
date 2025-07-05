@@ -49,6 +49,40 @@
       color: #004466;
       margin-bottom: 20px;
     }
+    .social-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-buttons a {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.social-buttons a:hover {
+  transform: scale(1.05);
+  background: rgba(0, 150, 255, 0.8);
+  color: #fff;
+}
+
+.social-buttons img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
     .products {
       display: flex;
       flex-wrap: wrap;
@@ -191,21 +225,21 @@
         <h3>Telegram Bot Creation</h3>
         <p>Fast and modern Telegram bot builds. Price: 400</p>
         <a href="https://wa.me/254785016388?text=Build%20me%20a%20Telegram%20bot">Order on WhatsApp</a>
+        <!-- Fixed Social Buttons -->
+<div class="social-buttons">
+  <a href="https://wa.me/254785016388" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"> WhatsApp
+  </a>
+  <a href="https://whatsapp.com/channel/0029VaogSY74IBhJWe8b472H" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram"> Channel
+  </a>
+  <a href="https://youtube.com/@james-j2i9h" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"> YouTube
+  </a>
+</div>
       </div>
     </div>
   </section>
-    <!-- Social Buttons -->
-  <div class="social-buttons">
-    <a href="https://wa.me/254785016388" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"> WhatsApp
-    </a>
-    <a href="https://whatsapp.com/channel/0029VaogSY74IBhJWe8b472H" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram"> Channel
-    </a>
-    <a href="https://youtube.com/@james-j2i9h" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"> YouTube
-    </a>
-  </div>
-  
+
 </body>
 </html>
