@@ -36,20 +36,15 @@
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-    .water-background {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      z-index: -1;
-      background: radial-gradient(circle, rgba(0,70,150,0.5), transparent 70%);
-      animation: ripple 10s linear infinite;
-    }
-
-    @keyframes ripple {
-      0% { background-position: 0 0; }
-      100% { background-position: 200% 200%; }
-    }
-
+.water-background {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: -1;
+  background: linear-gradient(to bottom, #001d3d, #003566);
+  filter: url(#waterFilter);
+  pointer-events: none;
+}
     .container {
       text-align: center;
       padding: 60px 20px 100px;
@@ -367,6 +362,15 @@
 </head>
 <body>
   <div class="water-background"></div>
+  <div class="water-background"></div>
+
+<svg style="display: none;">
+  <filter id="waterFilter">
+    <feTurbulence id="turbulence" type="turbulence" baseFrequency="0.02 0.04" numOctaves="3" result="turbulence"/>
+    <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="30" xChannelSelector="R" yChannelSelector="G"/>
+    <animate xlink:href="#turbulence" attributeName="baseFrequency" dur="20s" values="0.02 0.04; 0.03 0.03; 0.02 0.04" repeatCount="indefinite"/>
+  </filter>
+</svg>
 
   <div class="container">
     <img src="https://files.catbox.moe/ah7a8e.jpg" class="profile-pic" alt="Profile Picture">
