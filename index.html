@@ -12,7 +12,21 @@
       color: white;
       overflow-x: hidden;
     }
-
+.link-button {
+  display: inline-block;
+  background: #0ff;
+  color: black;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 10px auto;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 0 10px cyan;
+  transition: transform 0.3s ease;
+}
+.link-button:hover {
+  transform: scale(1.05);
+}
     .water-background {
       position: fixed;
       top: 0; left: 0;
@@ -51,6 +65,10 @@
 
     .top-buttons {
       margin: 30px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
     }
 
     .top-buttons button {
@@ -59,7 +77,6 @@
       font-weight: bold;
       border: none;
       padding: 10px 20px;
-      margin: 5px;
       border-radius: 10px;
       cursor: pointer;
       animation: shake 4s infinite;
@@ -123,7 +140,7 @@
       font-weight: bold;
       border-radius: 10px;
       cursor: pointer;
-      margin-bottom: 20px;
+      margin: 10px 10px 20px;
       animation: shake 4s infinite;
     }
 
@@ -183,9 +200,7 @@
       }
 
       .top-buttons {
-        display: flex;
         flex-direction: column;
-        gap: 10px;
       }
     }
   </style>
@@ -194,111 +209,124 @@
   <div class="water-background"></div>
 
   <div class="container">
-    <img src="https://i.imgur.com/rv9bUyb.png" class="profile-pic" alt="Profile Picture">
-    <div class="title">JAMES TECH DEV</div>
+    <img src="https://files.catbox.moe/6iwzl9.jpg" class="profile-pic" alt="Profile Picture">
+    <div class="title">JAMES TECH DEVELOPER</div>
 
     <div class="top-buttons">
       <button id="showProjects">information</button>
       <button id="showFriends">Friends</button>
+      <button id="james">Projects</button>
+      <button id="toggleHiddenLinks">🔒 Hidden Projects</button>
+    </div>
+
+    <div class="projects" id="informationSection">
+      <div class="project-card">
+        <div class="project-title">JamesTech Information</div>
+        <div class="project-desc">This is private developer info, welcome to JamesTech system.</div>
+      </div>
     </div>
 
     <div class="projects" id="projectsSection">
-      <div class="project-card">
-        <div class="project-title">telegram free pairing</div>
-        <div class="project-desc">created slayqueen via telegram for pairing wa bot free</div>
-      </div>
-      <div class="project-card">
-        <div class="project-title"> WhatsApp Bots founder</div>
-        <div class="project-desc">AI-powered bot with smart menus, APIs, and games.</div>
-      </div>
-      <div class="project-card">
-        <div class="project-title"> Hosting Panel</div>
-        <div class="project-desc">real server panel with RAM tracker and real IPs.</div>
-      </div>
-      <div class="project-card">
-        <div class="project-title"> Music Downloader</div>
-        <div class="project-desc">Search & download music fast with elegant dark UI.</div>
-      </div>
-      <div class="project-card">
-  <div class="project-title">APK Downloader</div>
-  <div class="project-desc">Download Android APKs securely from official sources.</div>
-</div>
-<div class="project-card">
-  <div class="project-title">Collaborator</div>
-  <div class="project-desc">Invite friends and code together in real-time online.</div>
-</div>
-<div class="project-card">
-  <div class="project-title">YouTube Downloader</div>
-  <div class="project-desc">Download HD videos and audio from YouTube easily.</div>
-</div>
-<div class="project-card">
-  <div class="project-title">Facebook Downloader</div>
-  <div class="project-desc">Grab Facebook videos in HD with a single click.</div>
-</div>
-<div class="project-card">
-  <div class="project-title">Background Remover</div>
-  <div class="project-desc">Remove image backgrounds using smart AI detection.</div>
-</div>
-<div class="project-card">
-  <div class="project-title">AI Studio</div>
-  <div class="project-desc">Chat with AI, generate text, images, and smart tools.</div>
-</div>
-<div class="project-card">
-  <div class="project-title">Portfolio Builder</div>
-  <div class="project-desc">Create and download your own portfolio in minutes.</div>
-</div>
-<div class="project-card">
-  <div class="project-title">Encryption Tools</div>
-  <div class="project-desc">Encrypt files and text with advanced protection.</div>
-</div>
-<div class="project-card">
-  <div class="project-title">Quotes Generator</div>
-  <div class="project-desc">Browse and copy wisdom or love quotes with effects.</div>
-</div>
-<div class="project-card">
-  <div class="project-title">Trusted Billing</div>
-  <div class="project-desc">Bill your Heroku accounts with secure WhatsApp steps.</div>
-</div>
-      <div class="project-card">
-        <div class="project-title">HTML Class</div>
-        <div class="project-desc">Interactive lessons, quizzes, and rewards.</div>
-      </div>
+      <div class="project-card"><div class="project-title">Telegram Free Pairing</div><div class="project-desc">Created Slayqueen via Telegram for pairing WA bot free.</div></div>
+                  <a href="https://t.me/lilithpremtrial_bot" target="_blank" class="link-button">pair now</a>
+                              <a href="https://chat.whatsapp.com/LRUCaBDPNcX3cXepxnloKn?mode=ac_t" target="_blank" class="link-button">join group</a>
+      <div class="project-card"><div class="project-title">WhatsApp Bots Founder</div><div class="project-desc">AI-powered bot with smart menus, APIs, and games.</div></div>
+                  <a href="https://whatsapp.com/channel/0029VaogSY74IBhJWe8b472H" target="_blank" class="link-button">channel</a>
+      <div class="project-card"><div class="project-title">Hosting Panel</div><div class="project-desc">Real server panel with RAM tracker and real IPs.</div></div>
+                  <a href="https://bwmxmd.online" target="_blank" class="link-button">order now</a>
+      <div class="project-card"><div class="project-title">Music Downloader</div><div class="project-desc">Search & download music fast with elegant dark UI.</div></div>
     </div>
-
+            <a href="jamesdev.top" target="_blank" class="link-button">Coming soon</a>
     <div class="friends-section" id="friendsSection">
-      <div class="friends-project">
-        <strong>Ibrahim Adams</strong><br/>
-        top friend,real motivator,helper and more other things
+      <div class="friends-project"><strong>Ibrahim Adams</strong><br/>Top friend, motivator, helper and more.</div>
+      <a href="https://whatsapp.com/channel/0029VaZuGSxEawdxZK9CzM0Y" target="_blank" class="link-button">channel</a>
+            <a href="https://bwmxmd.online" target="_blank" class="link-button">website</a>
+      <div class="friends-project"><strong>mzazi, killer, susan, my love soffie💕</strong><br/>They always support me, thank you.</div>
+                  <a href="https://whatsapp.com/channel/0029VbAzKoe4o7qFfgJtFR1t" target="_blank" class="link-button">mzazi channel</a>
+      <div class="friends-project"><strong>ChatGPT</strong><br/>Always debugs my projects.</div>
+    </div>
+
+    <div class="projects" id="hiddenLinksSection">
+      <div class="project-card">
+        <div class="project-title">Secret AI Tools</div>
+        <div class="project-desc">Private tools built for internal AI research and automation.</div>
       </div>
-      <div class="friends-project">
-        <strong>mzazi,killer,susan,my love💕</strong><br/>
-       they always help me and motivate me, encourage me when i feel like giving up thanks
-      </div>
-      <div class="friends-project">
-        <strong>Chat Gpt</strong><br/>
-         always debugs my projects .
+      <div class="project-card">
+        <div class="project-title">VIP Beta Project</div>
+        <div class="project-desc">Upcoming unreleased tools for testing and early access users.</div>
       </div>
     </div>
-  </div>
 
-  <div class="footer">
-    <button id="toggleContacts">CLICK</button>
-    <div class="footer-links" id="contactSection">
-      <a href="https://github.com/jamestech" target="_blank"><img src="https://img.icons8.com/fluency/48/github.png"/>GitHub</a>
-      <a href="https://wa.me/254785016388" target="_blank"><img src="https://img.icons8.com/fluency/48/whatsapp.png"/>WhatsApp</a>
+    <div class="footer">
+      <button id="toggleContacts">CLICK</button>
+      <div class="footer-links" id="contactSection">
+        <a href="https://github.com/jamestech" target="_blank"><img src="https://img.icons8.com/fluency/48/github.png"/>GitHub</a>
+        <a href="https://wa.me/254785016388" target="_blank"><img src="https://img.icons8.com/fluency/48/whatsapp.png"/>WhatsApp</a>
+      </div>
     </div>
   </div>
 
   <script>
-    const contactBtn = document.getElementById('toggleContacts');
-    const contactSection = document.getElementById('contactSection');
     const showProjectsBtn = document.getElementById('showProjects');
     const showFriendsBtn = document.getElementById('showFriends');
-    const projectsSection = document.getElementById('projectsSection');
+    const jamesBtn = document.getElementById('james');
+    const toggleHiddenBtn = document.getElementById('toggleHiddenLinks');
+    const contactBtn = document.getElementById('toggleContacts');
+
+    const infoSection = document.getElementById('informationSection');
     const friendsSection = document.getElementById('friendsSection');
+    const projectsSection = document.getElementById('projectsSection');
+    const hiddenLinksSection = document.getElementById('hiddenLinksSection');
+    const contactSection = document.getElementById('contactSection');
+
+    function hideAllSections() {
+      infoSection.style.display = 'none';
+      infoSection.style.opacity = '0';
+      friendsSection.style.display = 'none';
+      friendsSection.style.opacity = '0';
+      projectsSection.style.display = 'none';
+      projectsSection.style.opacity = '0';
+      hiddenLinksSection.style.display = 'none';
+      hiddenLinksSection.style.opacity = '0';
+    }
+
+    showProjectsBtn.onclick = () => {
+      hideAllSections();
+      infoSection.style.display = 'flex';
+      setTimeout(() => {
+        infoSection.style.opacity = '1';
+        infoSection.style.transform = 'translateY(0)';
+      }, 10);
+    };
+
+    jamesBtn.onclick = () => {
+      hideAllSections();
+      projectsSection.style.display = 'flex';
+      setTimeout(() => {
+        projectsSection.style.opacity = '1';
+        projectsSection.style.transform = 'translateY(0)';
+      }, 10);
+    };
+
+    showFriendsBtn.onclick = () => {
+      hideAllSections();
+      friendsSection.style.display = 'flex';
+      setTimeout(() => {
+        friendsSection.style.opacity = '1';
+        friendsSection.style.transform = 'translateY(0)';
+      }, 10);
+    };
+
+    toggleHiddenBtn.onclick = () => {
+      hideAllSections();
+      hiddenLinksSection.style.display = 'flex';
+      setTimeout(() => {
+        hiddenLinksSection.style.opacity = '1';
+        hiddenLinksSection.style.transform = 'translateY(0)';
+      }, 10);
+    };
 
     let contactVisible = false;
-
     contactBtn.onclick = () => {
       contactVisible = !contactVisible;
       if (contactVisible) {
@@ -311,35 +339,9 @@
       } else {
         contactSection.style.opacity = '0';
         contactSection.style.transform = 'translateY(20px)';
-        contactBtn.textContent = 'click';
+        contactBtn.textContent = 'CLICK';
         setTimeout(() => contactSection.style.display = 'none', 500);
       }
-    };
-
-    showProjectsBtn.onclick = () => {
-      friendsSection.style.opacity = '0';
-      friendsSection.style.transform = 'translateY(20px)';
-      setTimeout(() => {
-        friendsSection.style.display = 'none';
-        projectsSection.style.display = 'flex';
-        setTimeout(() => {
-          projectsSection.style.opacity = '1';
-          projectsSection.style.transform = 'translateY(0)';
-        }, 10);
-      }, 300);
-    };
-
-    showFriendsBtn.onclick = () => {
-      projectsSection.style.opacity = '0';
-      projectsSection.style.transform = 'translateY(20px)';
-      setTimeout(() => {
-        projectsSection.style.display = 'none';
-        friendsSection.style.display = 'flex';
-        setTimeout(() => {
-          friendsSection.style.opacity = '1';
-          friendsSection.style.transform = 'translateY(0)';
-        }, 10);
-      }, 300);
     };
   </script>
 </body>
