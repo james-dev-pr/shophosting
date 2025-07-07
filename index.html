@@ -111,12 +111,18 @@
     }
 
     .project-title {
-      font-size: 1.5em;
-      color: #0ff;
-      margin-bottom: 10px;
-      text-shadow: 0 0 5px #0ff;
-    }
+  font-size: 1.5em;
+  background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowText 5s linear infinite;
+  margin-bottom: 10px;
+}
 
+@keyframes rainbowText {
+  0% { background-position: 0% }
+  100% { background-position: 100% }
+}
     .project-desc {
       font-size: 0.95em;
       color: #ccc;
@@ -276,7 +282,7 @@
             <div class="project-title">a professional developer| slayqueen,carrie and terminator bot founder| online advanced real time and real students teacher | king of technology, 𝙇𝙊𝙍𝘿 𝙅𝘼𝙈𝙀𝙎 𝘿𝙀𝙑𝙀𝙇𝙊𝙋𝙀𝙍 𝙁𝙍𝙊𝙈 𝙆𝙀𝙉𝙔𝘼.</div>
             </h2>
             <div id="sidebar">
-  <button id="toggleSidebar">☰MENU</button>
+  <button id="toggleSidebar">☰</button>
   <div class="sidebar-content">
     <a href="">Info</a>
     <a href="">Projects</a>
@@ -285,10 +291,7 @@
     <a href="https://github.com/james-dev-pr" target="_blank"> GitHub</a>
   </div>
 </div>
-            
-           <p>
-        <div class="project-title">welcome to dev james properties no one is perfect im still trying, remember all girls are the same</div>
-        </p>
+           
     <div class="top-buttons">
       <button id="showProjects">information</button>
       <button id="showFriends">Friends</button>
