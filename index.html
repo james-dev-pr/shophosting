@@ -56,14 +56,35 @@
     }
 
     .profile-pic {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      border: 5px solid #0ff;
-      animation: shake 4s infinite;
-      margin-bottom: 15px;
-    }
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 5px solid #0ff;
+  margin-bottom: 15px;
+  box-shadow:
+    0 0 10px #0ff,
+    0 0 20px #f0f,
+    0 0 30px #0ff,
+    0 0 40px #f0f;
+  animation: ultraGlitchShake 0.3s infinite;
+  position: relative;
+  z-index: 1;
+}
 
+/* Ultra Glitch Keyframes */
+@keyframes ultraGlitchShake {
+  0%   { transform: translate(0, 0) scale(1) rotate(0deg); }
+  10%  { transform: translate(-10px, 5px) scale(1.1) rotate(-2deg); }
+  20%  { transform: translate(5px, -10px) scale(1.05) rotate(2deg); }
+  30%  { transform: translate(-15px, 10px) scale(1.2) rotate(-3deg); }
+  40%  { transform: translate(10px, -15px) scale(1.15) rotate(3deg); }
+  50%  { transform: translate(-10px, 5px) scale(1.1) rotate(-2deg); }
+  60%  { transform: translate(5px, -5px) scale(1.05) rotate(2deg); }
+  70%  { transform: translate(-5px, 15px) scale(1.15) rotate(-1deg); }
+  80%  { transform: translate(15px, -10px) scale(1.2) rotate(1deg); }
+  90%  { transform: translate(-5px, -15px) scale(1.1) rotate(-2deg); }
+  100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+}
     .title {
       font-size: 3.5em;
       font-weight: 900;
