@@ -251,6 +251,51 @@
   box-shadow: 0 0 10px cyan;
 }
 
+.skills-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.skill-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(0, 255, 255, 0.08);
+  border: 2px solid #0ff;
+  border-radius: 15px;
+  padding: 20px;
+  width: 320px;
+  box-shadow: 0 0 20px rgba(0,255,255,0.2);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s;
+}
+
+.skill-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px cyan;
+}
+
+.skill-box img {
+  width: 48px;
+  height: 48px;
+  filter: drop-shadow(0 0 4px cyan);
+}
+
+.skill-box h3 {
+  margin: 0;
+  color: #0ff;
+  font-size: 1.2em;
+  text-shadow: 0 0 5px #0ff;
+}
+
+.skill-box p {
+  margin: 4px 0 0;
+  font-size: 0.9em;
+  color: #ccc;
+}
 .sidebar-content {
   display: flex;
   flex-direction: column;
@@ -412,6 +457,47 @@
         <div class="project-title">JamesTech Information</div>
         <div class="project-desc">this website was crafted and designed by developer james for projects and work displaying, before using it make sure you agree with term's and conditions,dont forget to follow developer WhatsApp channel for more projects,jamesdev projects are manually designed projects so it may have errors.</div>
       </div>
+      <div class="skills-section">
+  <div class="skill-box">
+    <img src="https://img.icons8.com/color/48/html-5.png" alt="HTML">
+    <div>
+      <h3>HTML</h3>
+      <p>Structure of the web. I use semantic and clean markup.</p>
+    </div>
+  </div>
+
+  <div class="skill-box">
+    <img src="https://img.icons8.com/color/48/css3.png" alt="CSS">
+    <div>
+      <h3>CSS</h3>
+      <p>Stylish UIs with animations, gradients, and responsive layouts.</p>
+    </div>
+  </div>
+
+  <div class="skill-box">
+    <img src="https://img.icons8.com/color/48/javascript--v1.png" alt="JavaScript">
+    <div>
+      <h3>JavaScript</h3>
+      <p>Powering interactivity, animations, and logic on web apps.</p>
+    </div>
+  </div>
+
+  <div class="skill-box">
+    <img src="https://img.icons8.com/color/48/nodejs.png" alt="Node.js">
+    <div>
+      <h3>Node.js</h3>
+      <p>Server-side scripting for bots, APIs, and real-time apps.</p>
+    </div>
+  </div>
+
+  <div class="skill-box">
+    <img src="https://img.icons8.com/color/48/python--v1.png" alt="Python">
+    <div>
+      <h3>Python</h3>
+      <p>For AI tools, bots, and automation scripts.</p>
+    </div>
+  </div>
+</div>
     </div>
 
     <div class="projects" id="projectsSection">
