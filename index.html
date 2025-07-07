@@ -14,7 +14,8 @@
     }
 .link-button {
   display: inline-block;
-  background: #0ff;
+  background: linear-gradient(270deg, red, orange, yellow, green, cyan, blue, violet, red);
+  background-size: 1400% 1400%;
   color: black;
   font-weight: bold;
   padding: 10px 20px;
@@ -23,9 +24,17 @@
   text-decoration: none;
   box-shadow: 0 0 10px cyan;
   transition: transform 0.3s ease;
+  animation: rainbowRotate 6s ease infinite;
 }
+
 .link-button:hover {
   transform: scale(1.05);
+}
+
+@keyframes rainbowRotate {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
     .water-background {
       position: fixed;
