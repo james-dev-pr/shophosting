@@ -125,6 +125,67 @@
     .friends-project {
       text-align: center;
     }
+    #sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #001f3f;
+  padding-top: 10px;
+  z-index: 999;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 15px cyan;
+  width: 220px;
+  transform: translateX(-100%);
+}
+
+#sidebar.open {
+  transform: translateX(0);
+}
+
+#toggleSidebar {
+  position: absolute;
+  top: 10px;
+  right: -45px;
+  background: #0ff;
+  color: #000;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  padding: 10px 12px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px cyan;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+}
+
+.sidebar-content a {
+  color: #0ff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 10px;
+  background: rgba(0, 255, 255, 0.1);
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.sidebar-content a:hover {
+  background: rgba(0, 255, 255, 0.3);
+}
+
+@media screen and (max-width: 600px) {
+  #sidebar {
+    width: 180px;
+  }
+  #toggleSidebar {
+    right: -40px;
+  }
+}
 
     .footer {
       text-align: center;
@@ -212,7 +273,16 @@
     <img src="https://files.catbox.moe/ah7a8e.jpg" class="profile-pic" alt="Profile Picture">
     <div class="title">JAMES TECH DEVELOPER</div>
             <div class="project-desc">a professional developer| slayqueen,carrie and terminator bot founder| online advanced real time and real students teacher | king of technology, 𝙇𝙊𝙍𝘿 𝙅𝘼𝙈𝙀𝙎 𝘿𝙀𝙑𝙀𝙇𝙊𝙋𝙀𝙍 𝙁𝙍𝙊𝙈 𝙆𝙀𝙉𝙔𝘼.</div>
-            
+            <div id="sidebar">
+  <button id="toggleSidebar">☰</button>
+  <div class="sidebar-content">
+    <a href="#informationSection">🧠 Info</a>
+    <a href="#projectsSection">📁 Projects</a>
+    <a href="#friendsSection">🤝 Friends</a>
+    <a href="#hiddenLinksSection">🔒 Hidden</a>
+    <a href="https://github.com/jamestech" target="_blank">🐙 GitHub</a>
+  </div>
+</div>
             
            <h2>
         <div class="project-title">welcome to dev james properties no one is perfect im still trying, remember all girls are the same</div>
@@ -283,7 +353,19 @@
     const projectsSection = document.getElementById('projectsSection');
     const hiddenLinksSection = document.getElementById('hiddenLinksSection');
     const contactSection = document.getElementById('contactSection');
+    
+    const toggleSidebar = document.getElementById('toggleSidebar');
+const sidebar = document.getElementById('sidebar');
 
+toggleSidebar.onclick = () => {
+  sidebar.classList.toggle('open');
+};
+
+document.querySelectorAll('.sidebar-content a').forEach(link => {
+  link.onclick = () => {
+    sidebar.classList.remove('open');
+  };
+});
     function hideAllSections() {
       infoSection.style.display = 'none';
       infoSection.style.opacity = '0';
