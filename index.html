@@ -457,6 +457,7 @@
         <div class="project-title">JamesTech Information</div>
         <div class="project-desc">this website was crafted and designed by developer james for projects and work displaying, before using it make sure you agree with term's and conditions,dont forget to follow developer WhatsApp channel for more projects,jamesdev projects are manually designed projects so it may have errors.</div>
       </div>
+      <button id="toggleNotes">Hidden Notes</button>
       <div class="skills-section">
   <div class="skill-box">
     <img src="https://img.icons8.com/color/48/html-5.png" alt="HTML">
@@ -495,6 +496,22 @@
     <div>
       <h3>Python</h3>
       <p>For AI tools, bots, and automation scripts.</p>
+    </div>
+  </div>
+</div>
+<div class="projects" id="notesSection">
+  <div class="project-card">
+    <div class="project-title">Privacy Policy</div>
+    <div class="project-desc">
+      This site collects no data. All processing is local or encrypted.
+    </div>
+  </div>
+  <div class="project-card">
+    <div class="project-title">Private Notes</div>
+    <div class="project-desc">
+      Always test your code in a sandbox.<br/>
+      Never trust unknown input sources.<br/>
+      Use VPN + end-to-end encryption for real-time bots.
     </div>
   </div>
 </div>
@@ -560,6 +577,17 @@
     const hiddenLinksSection = document.getElementById('hiddenLinksSection');
     const contactSection = document.getElementById('contactSection');
     
+    const toggleNotesBtn = document.getElementById('toggleNotes');
+const notesSection = document.getElementById('notesSection');
+
+toggleNotesBtn.onclick = () => {
+  hideAllSections();
+  notesSection.style.display = 'flex';
+  setTimeout(() => {
+    notesSection.style.opacity = '1';
+    notesSection.style.transform = 'translateY(0)';
+  }, 10);
+};
     const toggleSidebar = document.getElementById('toggleSidebar');
 const sidebar = document.getElementById('sidebar');
 
